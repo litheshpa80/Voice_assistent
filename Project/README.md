@@ -135,25 +135,3 @@ For session recording, use Windows built-in tools:
 3. Commit your changes (`git commit -m 'Add amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- [ElevenLabs](https://elevenlabs.io/) for providing the conversational AI platform
-- Python community for excellent audio processing libraries
-- Contributors and testers who helped improve the assistant
-
-## 📞 Support
-
-- **Issues:** Open a GitHub issue for bugs or feature requests
-- **Discussions:** Use GitHub Discussions for questions and ideas
-- **ElevenLabs Docs:** [Official API Documentation](https://elevenlabs.io/docs)
-
----
-
-**⭐ Star this repository if you found it helpful!**
-
-*Built with ❤️ using ElevenLabs Conversational AI*
