@@ -128,9 +128,66 @@ For session recording, use Windows built-in tools:
 - **Game Bar:** Press `Windows + G`, then `Windows + Alt + R`
 - **Voice Recorder:** Built-in Windows app for audio-only recording
 
-## 🤝 Contributing
+# Setting Up the Environment
+## Install Required Packages
+Before we start, make sure you have Python installed. Then, install the required dependencies:
 
-1. Fork the repository
+pip install elevenlabs elevenlabs[pyaudio] python-dotenv
+
+Processing audio requires additional dependencies on Linux and MacOS:
+
+For Linux, you need to install portaudio19:
+sudo apt install portaudio19
+
+For MacOS, you need to install portaudio:
+brew install portaudio
+
+## Setting up ElevenLabs
+ElevenLabs provides a Conversational AI API that we will use to create our Voice Assistant.
+
+🎤 The API records the user's voice through the microphone
+🖨️ It processes it to know when the user has finished speaking or is interrupting the assistant
+🤖 It calls an LLM model to generate a response
+📈 It synthesizes the response into speech
+🔊 It plays the synthesized speech through the speakers
+
+
+Sign up at ElevenLabs and follow the instructions to create an account.
+
+Once signed in, go to "Conversational AI".
+
+<img width="1897" height="986" alt="image" src="https://github.com/user-attachments/assets/2faf577f-b9d3-4ec4-8a58-df6ee1e3b9a0" />
+
+
+Go to "Agents".
+<img width="1916" height="986" alt="image" src="https://github.com/user-attachments/assets/ad7fbae5-6354-4c6f-9b24-fd076e07689c" />
+
+Click on "Start from blank".
+<img width="1916" height="907" alt="image" src="https://github.com/user-attachments/assets/ec5dedff-4b12-4b19-b59c-5791c120226f" />
+
+Create a .env file at the root of your project folder. We will use this file to store our API credentials securely. This way they won't be hardcoded in the script. In this .env file, add your Agent ID:
+<img width="1902" height="902" alt="image" src="https://github.com/user-attachments/assets/23355a4f-a898-4854-8170-93e082fe8a75" />
+
+
+AGENT_ID=your_agent_id
+
+There shouldn’t be spaces around the = in a .env file.
+
+Go to the "Security" tab, enable the "First message" and "System prompt" overrides, and save. This will allow us to customize the assistant's first message and system prompt using Python code.
+<img width="1917" height="906" alt="image" src="https://github.com/user-attachments/assets/2f3ef54e-0eab-456b-b651-e53924c83133" />
+
+
+Click on your profile and go to "API keys". Create a new API key and copy it to your .env file:
+API_KEY="sk_XXX...XXX"
+
+Important: Make sure to save your .env file after adding the credentials.
+<img width="1916" height="911" alt="image" src="https://github.com/user-attachments/assets/29663cf9-8e06-43f6-96ef-79029089281d" />
+
+
+
+ElevenLabs is now set up and ready to be used in our Python script!
+
+Note: ElevenLabs works with a credit system. When you sign up, you get 10,000 free credits which amount to 15 minutes of conversation. You can buy more credits if needed.
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
 3. Commit your changes (`git commit -m 'Add amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
