@@ -218,10 +218,6 @@ We welcome contributions! Here's how to get started:
 - 🧪 Test improvements
 - 🎨 UI/UX improvements
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🙏 Acknowledgments
 
 - **[ElevenLabs](https://elevenlabs.io/)** - For providing the amazing Conversational AI platform
